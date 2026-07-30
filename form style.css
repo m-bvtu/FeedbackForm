@@ -1,0 +1,205 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#37415c, #242e49, #54162b, #b4182d);
+    color: #ffa586;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2.8em;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 0.7em;
+    font-size: 2.5em;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+fieldset {
+    border: none;
+    padding: 1.7em;
+}
+
+fieldset:last-of-type, fieldset:last-of-type legend {
+    margin-bottom: -25px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #ffa586;
+}
+
+.personal-information input, textarea {
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #edc58d;
+    border: none;
+    margin: 20px 0;
+    color: #333;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #333;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffa586;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.25s ease;
+    vertical-align: middle;
+}
+
+input[type="radio"]:hover, input[type="checkbox"]:hover {
+    background-color: #ffa586;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background-color: #ffa586;
+}
+
+input[type="radio"]:checked::after, input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fce7c9;
+    font-size: 1.4em;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 15px;
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+select {
+    padding: 0.75em;
+    min-width: 8em;
+    border-radius: 5px;
+    background-color: #edc58d;
+    border: none;
+    color: #333;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 3px;
+    border: 2px solid #edc58d;
+    background-color: transparent;
+    color: #edc58d;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #edc58d;
+    color: #333;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    .form-container {
+        width: 85vw;
+        padding: 1.7em;
+    }
+
+    .form-container h1 {
+        font-size: 2em;
+    }
+
+    legend {
+        font-size: 1.35em;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 92vw;
+        padding: 0.5em;
+    }
+
+    .form-container p {
+        font-size: 0.8em;
+        margin-bottom: 2em;
+    }
+
+    .form-container h1 {
+        font-size: 1.7em;
+    }
+
+    legend {
+        font-size: 1.2em;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ratings {
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .rating-container {
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    select {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    button {
+        width: 200px;
+    }
+}

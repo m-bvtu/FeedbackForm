@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Feedback Form</title>
+    <link rel="stylesheet" href="form style.css">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Hotel Feedback Form</h1>
+        <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
+        <form action="">
+            <fieldset class="personal-information">
+                <legend>Personal Information</legend>
+                <label for="name">Name (required): </label>
+                <input required id="name" type="text" placeholder="e.g. John Doe">
+
+                <label for="email">Email Address (required): </label>
+                <input required id="email" type="text" placeholder="example@email.com">
+
+                <label for="age">Age (optional): </label>
+                <input id="age" type="number" name="age" min="5" max="100">
+            </fieldset>
+
+            <fieldset class="first-stay">
+                <legend>Was this your first time at our hotel?</legend>
+                <label class="checkbox-container" for="yes-option">
+                    <input type="radio" name="hotel-stay" id="yes-option">
+                    Yes
+                </label>
+                <label class="checkbox-container" for="no-option">
+                    <input type="radio" name="hotel-stay" id="no-option">
+                    No
+                </label>
+            </fieldset>
+
+            <fieldset class="reason">
+                <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+
+                <label class="checkbox-container" for="social-media">
+                    <input type="checkbox" name="choice" id="social-media" value="social-media">
+                    Social Media Ads
+                </label>
+
+                <label class="checkbox-container" for="recommendation">
+                    <input type="checkbox" name="choice" id="recommendation" value="recommendation">
+                    Personal Recommendation
+                </label>
+
+                <label class="checkbox-container" for="location">
+                    <input type="checkbox" name="choice" id="location" value="location">
+                    Location
+                </label>
+
+                <label class="checkbox-container" for="reputation">
+                    <input type="checkbox" name="choice" id="reputation" value="reputation">
+                    Reputation
+                </label>
+
+                <label class="checkbox-container" for="price">
+                    <input type="checkbox" name="choice" id="price" value="price">
+                    Price
+                </label>
+            </fieldset>
+
+            <fieldset class="ratings">
+                <legend>Ratings</legend>
+                <div class="rating-container">
+                    <label class="rate" for="service">How was the service?</label>
+                    <select name="service" id="service">
+                        <option disabled value="">Select one</option>
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option selected value="excellent">Excellent</option>
+                    </select>
+                </div>
+        
+                <div class="rating-container">
+                    <label class="rate" for="food">How was the food?</label>
+                    <select name="food" id="food">
+                        <option disabled value="">Select one</option>
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option selected value="excellent">Excellent</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Other comments?</legend>
+                <textarea rows="10" name="additional-thoughts" id="additional-thoughts" placeholder="Let us know what you think..."></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
